@@ -4,9 +4,6 @@ import styles from '../styles/ProductCard.module.css';
 const ProductCard = ({ product, onRemove }) => {
   const { id, name, price, inStock } = product;
 
-  // CSS Modules scopes class names (e.g. _outOfStockClass_xyz) so toHaveClass()
-  // won't match the plain string "outOfStockClass".
-  // Fix: add it as a plain global class alongside the module class.
   const outOfStockClass = !inStock ? `${styles.outOfStockClass} outOfStockClass` : '';
 
   return (

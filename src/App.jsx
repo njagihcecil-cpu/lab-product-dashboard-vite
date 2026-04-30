@@ -11,14 +11,14 @@ const App = () => {
 
   const [filter, setFilter] = useState('all');
 
-  // Derive filtered list from current products + active filter
+
   const filteredProducts = products.filter((product) => {
     if (filter === 'inStock')    return product.inStock === true;
     if (filter === 'outOfStock') return product.inStock === false;
     return true;
   });
 
-  // Remove a product by id
+
   const handleRemove = (id) => {
     setProducts((prev) => prev.filter((p) => p.id !== id));
   };
@@ -27,9 +27,9 @@ const App = () => {
     <div>
       <h1>Product Dashboard</h1>
 
-      <button onClick={() => setFilter('all')}         disabled={filter === 'all'}>All</button>
-      <button onClick={() => setFilter('inStock')}     disabled={filter === 'inStock'}>In Stock</button>
-      <button onClick={() => setFilter('outOfStock')}  disabled={filter === 'outOfStock'}>Out of Stock</button>
+      <button onClick={() => setFilter('all')} disabled={filter === 'all'}>All</button>
+      <button onClick={() => setFilter('inStock')} disabled={filter === 'inStock'}>In Stock</button>
+      <button onClick={() => setFilter('outOfStock')} disabled={filter === 'outOfStock'}>Out of Stock</button>
 
       <ProductList products={filteredProducts} onRemove={handleRemove} />
     </div>
