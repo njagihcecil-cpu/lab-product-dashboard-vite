@@ -1,35 +1,10 @@
-/* Base card style — applied to every product */
 .card {
-  border: 1px solid #222;
+  border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 16px;
   border-radius: 6px;
-  background: #fff;
 }
 
-/* Applied to out-of-stock cards — name matches what the test checks */
 .outOfStockClass {
   opacity: 0.5;
-}
-
-.productName {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.price {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-/* Green label for in-stock items */
-.inStock {
-  color: green;
-  font-weight: 500;
-}
-
-/* Red label for out-of-stock items */
-.outOfStockText {
-  color: red;
-  font-weight: 500;
 }
